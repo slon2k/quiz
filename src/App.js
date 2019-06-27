@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, withRouter} from 'react-router-dom'
+import { Switch, Route, withRouter} from 'react-router-dom'
 import StartPage from './pages/Start'
 import QuizPage from "./pages/Quiz";
 import FinishPage from "./pages/Finish";
@@ -60,7 +60,7 @@ class App extends React.Component {
         console.log(this.state);
         const {tasks, currentTaskIndex} = this.state;
         return (
-            <Router>
+            <>
                 <div>
                     <h2>App</h2>
                 </div>
@@ -81,7 +81,7 @@ class App extends React.Component {
                            component={FinishPage}
                     />
                 </Switch>
-            </Router>
+            </>
         )
     }
 }

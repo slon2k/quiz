@@ -1,7 +1,7 @@
 import React from 'react'
-import {withRouter} from "react-router";
 import Question from "../components/Question";
 import Options from "../components/Options";
+import {Redirect} from "react-router";
 
 class QuizPage extends React.Component {
 
@@ -11,6 +11,9 @@ class QuizPage extends React.Component {
         console.log('task ', task);
         const {question} = task === undefined ? '' : task;
         const {options} = task === undefined ? [] : task;
+
+        if(taskIndex ===1 )
+            return <Redirect to='/result'/>
 
         return (
             <div>
@@ -26,4 +29,4 @@ class QuizPage extends React.Component {
     }
 }
 
-export default withRouter(QuizPage)
+export default QuizPage

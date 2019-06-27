@@ -1,5 +1,4 @@
 import React from 'react'
-import {withRouter} from "react-router";
 
 const StartPage = ({history}) => {
     return (
@@ -11,4 +10,4 @@ const StartPage = ({history}) => {
     )
 }
 
-export default withRouter(StartPage)
+export default StartPage
